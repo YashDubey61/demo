@@ -1,3 +1,4 @@
+import uuid
 from rdkit import Chem
 from rdkit.Chem import AllChem
 import os
@@ -20,7 +21,8 @@ class Molecule3DGenerator:
 
         AllChem.UFFOptimizeMolecule(mol)
 
-        output_path = os.path.join(self.output_dir, "molecule.sdf")
+        filename = f"molecule_{uuid.uuid4().hex[:8]}.sdf"
+        output_path = os.path.join(self.output_dir, filename)
         writer = Chem.SDWriter(output_path)
         writer.write(mol)
         writer.close()

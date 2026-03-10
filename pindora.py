@@ -1,3 +1,4 @@
+import logging
 from Tengan.generate_from_smiles import MoleculeGenerator
 from utils.fetch_data import FetchData
 from utils.copilot import AzureOpenAIChatClient
@@ -5,6 +6,8 @@ import json
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Crippen, AllChem
 from rdkit import DataStructs
+
+logger = logging.getLogger(__name__)
 
 class Pindora:
     def __init__(self):
@@ -18,8 +21,9 @@ class Pindora:
         )
         pass
     def drug_discovery_pipeline(self, prompt: str):
-        disease_c=self.copilot.generate_desease_name_from_prompt(prompt)
-        diseases=json.loads(disease_c)["desease"]
+        disease_c=self.copilot.generate_disease_name_from_prompt(prompt)
+        parsed = json.loads(disease_c)
+        diseases = parsed.get("disease") or parsed.get("desease", [])
         all_data = []
 
         for disease_name in diseases:
@@ -88,8 +92,8 @@ class Pindora:
                     fp1 = AllChem.GetMorganFingerprintAsBitVect(mol1, 2)
                     fp2 = AllChem.GetMorganFingerprintAsBitVect(mol2, 2)
                     return DataStructs.TanimotoSimilarity(fp1, fp2)
-            except:
-                pass
+            except Exception as e:
+                logger.warning("Similarity calculation failed for %s vs %s: %s", smiles1, smiles2, e)
             return 0.0
 
         def get_molecular_properties(smiles: str) -> dict:
@@ -105,8 +109,8 @@ class Pindora:
                         "rotatable_bonds": Descriptors.NumRotatableBonds(mol),
                         "aromatic_rings": Descriptors.NumAromaticRings(mol)
                     }
-            except:
-                pass
+            except Exception as e:
+                logger.warning("Property calculation failed for %s: %s", smiles, e)
             return {"valid": False}
 
         gen_mol = []

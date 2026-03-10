@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { getApiUrl } from "../config/api";
 
 type Molecule = {
   x: number;
@@ -100,12 +101,12 @@ export default function Loading() {
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const id = Math.floor(Math.random() * 10) + 1;
-        const res = await fetch(
-          "https://jsonplaceholder.typicode.com/posts/" + id
-        );
+        const res = await fetch(getApiUrl("/checks/status_checks"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        });
         const data = await res.json();
-        setStatus("Cellular update: " + data.title);
+        setStatus(data.message || "Processing…");
       } catch {
         setStatus("Monitoring biochemical activity…");
       }

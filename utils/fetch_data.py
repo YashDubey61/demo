@@ -1,9 +1,6 @@
 import requests
-import json
-import pandas as pd
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 import time
-from utils.copilot import AzureOpenAIChatClient
 
 OPEN_TARGETS_URL = "https://api.platform.opentargets.org/api/v4/graphql"
 CHEMBL_URL = "https://www.ebi.ac.uk/chembl/api/data"
@@ -33,7 +30,8 @@ def query_open_targets(query: str, variables: Dict[str, Any] = None, max_retries
                 continue
             else:
                 raise
-    
+
+    raise RuntimeError(f"Open Targets query failed after {max_retries} retries")
 
 def query_chembl(endpoint: str, params: Dict[str, Any] = None) -> Dict[str, Any]:
     if endpoint.endswith(".json"):

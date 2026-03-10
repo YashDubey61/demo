@@ -1,3 +1,4 @@
+import asyncio
 from fastapi import APIRouter, HTTPException
 from models.schemas import TextInput, TextResponse, Generate3DInput, Generate3DResponse
 from pindora import Pindora
@@ -10,19 +11,30 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
+def _run_drug_discovery(text: str):
+    with open("data/status.json", "w") as f:
+        json.dump({"status": "Molecules Generation in Progress"}, f)
+
+    pindora_instance = Pindora()
+    mol_gen = pindora_instance.drug_discovery_pipeline(text)
+
+    with open("data/status.json", "w") as f:
+        json.dump({"status": "Molecules Generation Completed"}, f)
+
+    return mol_gen
+
 @router.post("/drug_discovery", response_model=TextResponse)
 async def process_text(request: TextInput):
     if not request.text or len(request.text.strip()) == 0:
         raise HTTPException(status_code=400, detail="Text cannot be empty")
     print("Received text:", request.text)
-    with open("data/status.json", "w") as f:
-        json.dump({"status": "Molecules Generation in Progress"}, f)
-    
-    Pindora_instance = Pindora()
-    mol_gen = Pindora_instance.drug_discovery_pipeline(request.text)
 
-    with open("data/status.json", "w") as f:
-        json.dump({"status": "Molecules Generation Completed"}, f)
+    try:
+        mol_gen = await asyncio.to_thread(_run_drug_discovery, request.text)
+    except Exception as e:
+        with open("data/status.json", "w") as f:
+            json.dump({"status": "Molecules are not Generating"}, f)
+        raise HTTPException(status_code=500, detail=str(e))
 
     return {
         "input_text": request.text,
@@ -48,9 +60,9 @@ async def generate_3d_endpoint(request: Generate3DInput):
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
 
-@router.post("/get_discorvery_results")
+
+@router.post("/get_discovery_results")
 async def get_discovery_results():
 
     with open("data/status.json", "r") as f:
@@ -66,7 +78,6 @@ async def get_discovery_results():
             json.dump(status, f)
     with open("data/generated_molecules_new.json", "r") as f:
         results = json.load(f)
-
 
     return {
         "status": "success",

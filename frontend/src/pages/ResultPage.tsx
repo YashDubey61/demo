@@ -4,6 +4,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import ReportModal from "./Report";
+import { getApiUrl } from "../config/api";
 
 type Molecule = {
   smiles: string;
@@ -40,7 +41,7 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
       setMetrics(null);
       setIsMetricsLoading(true);
 
-      const res = await fetch("/api/metrics", {
+      const res = await fetch(getApiUrl("/metrics/metrics_data"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ input_smile: smile }),
