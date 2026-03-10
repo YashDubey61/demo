@@ -5,8 +5,8 @@ try:
     from .mol_metrics import Tokenizer
     from .generator import GeneratorModel, GenSampler
 except ImportError:
-    from mol_metrics import Tokenizer
-    from generator import GeneratorModel, GenSampler
+    from Tengan.mol_metrics import Tokenizer
+    from Tengan.generator import GeneratorModel, GenSampler
 
 class MoleculeGenerator:
     def __init__(self, model_path: str, batch_size: int = 64, max_len: int = 70):

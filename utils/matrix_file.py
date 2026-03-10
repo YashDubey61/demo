@@ -78,7 +78,7 @@ class MatrixPredictor:
         target_idx = self.target_bundle["model"].predict(X)[0]
 
         target = self.target_bundle["label_encoder"].inverse_transform(
-            [int(target_idx)]
+            [int(target_idx.item()) if hasattr(target_idx, 'item') else int(target_idx)]
         )[0]
 
         return {
@@ -88,4 +88,4 @@ class MatrixPredictor:
             "Predicted_Target": str(target)
         }
 
-print(MatrixPredictor().predict_all("CC(=O)NC1=CC=C(O)C=C1"))
+# print(MatrixPredictor().predict_all("CC(=O)NC1=CC=C(O)C=C1"))
