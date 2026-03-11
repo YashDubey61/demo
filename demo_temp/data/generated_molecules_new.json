@@ -1,0 +1,370 @@
+[
+  {
+    "input_smile": "NC(=O)OCC(COC(N)=O)c1ccccc1",
+    "disease_name": "influenza",
+    "target_symbol": "GRIN3A",
+    "drug_name": "FELBAMATE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "NC(=O)OCC(COC(N)=O)c1ccccc1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 238.24300000000002,
+            "logp": 0.9607999999999993,
+            "hbd": 2,
+            "hba": 4,
+            "rotatable_bonds": 5,
+            "aromatic_rings": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "Cl.NC12CC3CC(CC(C3)C1)C2",
+    "disease_name": "influenza",
+    "target_symbol": "GRIN2D",
+    "drug_name": "AMANTADINE HYDROCHLORIDE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "Cl.NC12CC3CC(CC(C3)C1)C2",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 187.71399999999994,
+            "logp": 2.3357,
+            "hbd": 1,
+            "hba": 1,
+            "rotatable_bonds": 0,
+            "aromatic_rings": 0
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "Cl.NC12CC3CC(CC(C3)C1)C2",
+    "disease_name": "influenza",
+    "target_symbol": "GRIN2C",
+    "drug_name": "AMANTADINE HYDROCHLORIDE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "Cl.NC12CC3CC(CC(C3)C1)C2",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 187.71399999999994,
+            "logp": 2.3357,
+            "hbd": 1,
+            "hba": 1,
+            "rotatable_bonds": 0,
+            "aromatic_rings": 0
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "NC(=O)OCC(COC(N)=O)c1ccccc1",
+    "disease_name": "influenza",
+    "target_symbol": "GRIN1",
+    "drug_name": "FELBAMATE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "NC(=O)OCC(COC(N)=O)c1ccccc1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 238.24300000000002,
+            "logp": 0.9607999999999993,
+            "hbd": 2,
+            "hba": 4,
+            "rotatable_bonds": 5,
+            "aromatic_rings": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "Cl.NC12CC3CC(CC(C3)C1)C2",
+    "disease_name": "influenza",
+    "target_symbol": "GRIN2A",
+    "drug_name": "AMANTADINE HYDROCHLORIDE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "Cl.NC12CC3CC(CC(C3)C1)C2",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 187.71399999999994,
+            "logp": 2.3357,
+            "hbd": 1,
+            "hba": 1,
+            "rotatable_bonds": 0,
+            "aromatic_rings": 0
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "NC(=O)OCC(COC(N)=O)c1ccccc1",
+    "disease_name": "influenza",
+    "target_symbol": "GRIN2B",
+    "drug_name": "FELBAMATE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "NC(=O)OCC(COC(N)=O)c1ccccc1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 238.24300000000002,
+            "logp": 0.9607999999999993,
+            "hbd": 2,
+            "hba": 4,
+            "rotatable_bonds": 5,
+            "aromatic_rings": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "NC(=O)OCC(COC(N)=O)c1ccccc1",
+    "disease_name": "influenza",
+    "target_symbol": "GRIN3B",
+    "drug_name": "FELBAMATE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "NC(=O)OCC(COC(N)=O)c1ccccc1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 238.24300000000002,
+            "logp": 0.9607999999999993,
+            "hbd": 2,
+            "hba": 4,
+            "rotatable_bonds": 5,
+            "aromatic_rings": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1",
+    "disease_name": "influenza",
+    "target_symbol": "PTGS2",
+    "drug_name": "INDOMETHACIN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 357.793,
+            "logp": 3.9273200000000026,
+            "hbd": 1,
+            "hba": 4,
+            "rotatable_bonds": 4,
+            "aromatic_rings": 3
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "CC(C)Cc1ccc(C(C)C(=O)O)cc1",
+    "disease_name": "influenza",
+    "target_symbol": "PTGS1",
+    "drug_name": "IBUPROFEN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "CC(C)Cc1ccc(C(C)C(=O)O)cc1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 206.28499999999997,
+            "logp": 3.073200000000001,
+            "hbd": 1,
+            "hba": 1,
+            "rotatable_bonds": 4,
+            "aromatic_rings": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "COc1cc(CNC(=O)CCCC/C=C/C(C)C)ccc1O",
+    "disease_name": "influenza",
+    "target_symbol": "TRPV1",
+    "drug_name": "CAPSAICIN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "COc1cc(CNC(=O)CCCC/C=C/C(C)C)ccc1O",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 305.418,
+            "logp": 3.789600000000003,
+            "hbd": 2,
+            "hba": 3,
+            "rotatable_bonds": 9,
+            "aromatic_rings": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "CC(=O)Nc1ccc(O)cc1",
+    "disease_name": "influenza",
+    "target_symbol": "FAAH",
+    "drug_name": "ACETAMINOPHEN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "CC(=O)Nc1ccc(O)cc1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 151.165,
+            "logp": 1.3505999999999998,
+            "hbd": 2,
+            "hba": 2,
+            "rotatable_bonds": 1,
+            "aromatic_rings": 1
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+    "disease_name": "influenza",
+    "target_symbol": "RPL17",
+    "drug_name": "ATALUREN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 284.246,
+            "logp": 3.240900000000001,
+            "hbd": 1,
+            "hba": 4,
+            "rotatable_bonds": 3,
+            "aromatic_rings": 3
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+    "disease_name": "influenza",
+    "target_symbol": "RPSA",
+    "drug_name": "ATALUREN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 284.246,
+            "logp": 3.240900000000001,
+            "hbd": 1,
+            "hba": 4,
+            "rotatable_bonds": 3,
+            "aromatic_rings": 3
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "O=C(/C=C\\n1cnc(-c2cc(C(F)(F)F)cc(C(F)(F)F)c2)n1)NNc1cnccn1",
+    "disease_name": "influenza",
+    "target_symbol": "XPO1",
+    "drug_name": "SELINEXOR",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "O=C(/C=C\\n1cnc(-c2cc(C(F)(F)F)cc(C(F)(F)F)c2)n1)NNc1cnccn1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 443.311,
+            "logp": 3.386700000000001,
+            "hbd": 2,
+            "hba": 7,
+            "rotatable_bonds": 5,
+            "aromatic_rings": 3
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+    "disease_name": "influenza",
+    "target_symbol": "RPS27A",
+    "drug_name": "ATALUREN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 284.246,
+            "logp": 3.240900000000001,
+            "hbd": 1,
+            "hba": 4,
+            "rotatable_bonds": 3,
+            "aromatic_rings": 3
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+    "disease_name": "influenza",
+    "target_symbol": "RPS11",
+    "drug_name": "ATALUREN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 284.246,
+            "logp": 3.240900000000001,
+            "hbd": 1,
+            "hba": 4,
+            "rotatable_bonds": 3,
+            "aromatic_rings": 3
+          }
+        }
+      ]
+    ]
+  }
+]

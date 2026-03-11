@@ -1,0 +1,88 @@
+[
+  {
+    "input_smile": "C[C@H]1O[C@@H](O[C@H]2[C@@H](O)C[C@H](O[C@H]3[C@@H](O)C[C@H](O[C@H]4CC[C@@]5(C)[C@H](CC[C@@H]6[C@@H]5C[C@@H](O)[C@]5(C)[C@@H](C7=CC(=O)OC7)CC[C@]65O)C4)O[C@@H]3C)O[C@@H]2C)C[C@H](O)[C@@H]1O",
+    "disease_name": "rabies",
+    "target_symbol": "ATP1A3",
+    "drug_name": "DIGOXIN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "C[C@H]1O[C@@H](O[C@H]2[C@@H](O)C[C@H](O[C@H]3[C@@H](O)C[C@H](O[C@H]4CC[C@@]5(C)[C@H](CC[C@@H]6[C@@H]5C[C@@H](O)[C@]5(C)",
+          "similarity": 0.0,
+          "properties": {
+            "valid": false
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "CC(=O)O.CNC(=N)NCCC[C@H](N)C(=O)O",
+    "disease_name": "rabies",
+    "target_symbol": "NOS2",
+    "drug_name": "TILARGININE ACETATE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "CC(=O)O.CNC(=N)NCCC[C@H](N)C(=O)O",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 248.28299999999996,
+            "logp": -0.9868299999999983,
+            "hbd": 6,
+            "hba": 4,
+            "rotatable_bonds": 5,
+            "aromatic_rings": 0
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+    "disease_name": "rabies",
+    "target_symbol": "RPS15",
+    "drug_name": "ATALUREN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 284.246,
+            "logp": 3.240900000000001,
+            "hbd": 1,
+            "hba": 4,
+            "rotatable_bonds": 3,
+            "aromatic_rings": 3
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1",
+    "disease_name": "rabies",
+    "target_symbol": "CHRNA4",
+    "drug_name": "VARENICLINE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 211.26799999999994,
+            "logp": 1.8038999999999998,
+            "hbd": 1,
+            "hba": 3,
+            "rotatable_bonds": 0,
+            "aromatic_rings": 2
+          }
+        }
+      ]
+    ]
+  }
+]
