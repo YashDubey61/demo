@@ -1,8 +1,22 @@
 """Generate 3D molecular coordinates from SMILES using RDKit (ETKDG + MMFF/UFF)."""
 import uuid
 import os
+from typing import Any
 from rdkit import Chem
-from rdkit.Chem import AllChem
+from rdkit.Chem import AllChem, Descriptors
+
+
+def get_molecule_metadata(mol: "Chem.Mol") -> dict[str, Any]:
+    """
+    Extract molecule metadata using RDKit.
+    Returns: drug_name (caller provides), smiles, formula, mol_weight, num_atoms, num_bonds.
+    """
+    return {
+        "molecular_formula": Chem.rdMolDescriptors.CalcMolFormula(mol),
+        "molecular_weight": round(Descriptors.ExactMolWt(mol), 2),
+        "num_atoms": mol.GetNumAtoms(),
+        "num_bonds": mol.GetNumBonds(),
+    }
 
 
 class Molecule3DGenerator:

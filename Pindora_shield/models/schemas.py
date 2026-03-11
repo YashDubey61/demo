@@ -28,3 +28,7 @@ class Generate3DMoleculeResponse(BaseModel):
     sdf: str
     status: str
     message: str
+    molecular_formula: Optional[str] = None
+    molecular_weight: Optional[float] = None
+    num_atoms: Optional[int] = None
+    num_bonds: Optional[int] = None

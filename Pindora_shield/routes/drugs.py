@@ -9,7 +9,7 @@ from models.schemas import (
     Generate3DMoleculeResponse,
 )
 from pindora import Pindora
-from utils.generate_3d import Molecule3DGenerator
+from utils.generate_3d import Molecule3DGenerator, get_molecule_metadata
 import json
 
 router = APIRouter(
@@ -77,12 +77,17 @@ async def generate_3d_molecule_endpoint(request: Generate3DMoleculeInput):
 
     try:
         generator = Molecule3DGenerator()
-        sdf = generator.generate_sdf_string(request.smiles.strip())
+        mol, sdf = generator.generate_3d_from_smiles(request.smiles.strip())
+        metadata = get_molecule_metadata(mol)
         return {
             "smiles": request.smiles,
             "sdf": sdf,
             "status": "success",
             "message": "3D molecule generated successfully",
+            "molecular_formula": metadata["molecular_formula"],
+            "molecular_weight": metadata["molecular_weight"],
+            "num_atoms": metadata["num_atoms"],
+            "num_bonds": metadata["num_bonds"],
         }
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))

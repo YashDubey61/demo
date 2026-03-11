@@ -4,6 +4,18 @@
 
 This feature generates 3D molecular structures from SMILES strings using RDKit (ETKDG + MMFF/UFF) and displays them in an interactive 3Dmol.js viewer.
 
+## Enhanced Visualization Features
+
+- **Atom color legend**: CPK/Jmol colors with legend panel
+- **Molecule title**: Dynamic title with drug name
+- **Atom labels**: Toggle C1, O2, N3 etc.
+- **Molecular info panel**: Formula, weight, atoms, bonds
+- **Style controls**: Ball-and-stick, Stick, Sphere, Surface
+- **Functional group highlighting**: O, N, S highlighting toggle
+- **Hover tooltips**: Atom type, atomic number, coordinates
+- **Export**: Save as PNG
+- **Lighting**: Outline style, orthographic projection
+
 ---
 
 ## 1. Backend (RDKit)

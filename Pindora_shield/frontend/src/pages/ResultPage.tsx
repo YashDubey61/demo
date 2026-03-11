@@ -35,7 +35,7 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
   const [isMetricsLoading, setIsMetricsLoading] = useState(false);
 
   const [reportSmile, setReportSmile] = useState<string | null>(null);
-  const [view3DSmile, setView3DSmile] = useState<string | null>(null);
+  const [view3D, setView3D] = useState<{ smiles: string; drugName?: string } | null>(null);
 
   const fetchMetrics = async (smile: string) => {
     try {
@@ -170,7 +170,7 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
                   </button>
                   <button
                     className="report-button"
-                    onClick={() => setView3DSmile(mol.smiles)}
+                    onClick={() => setView3D({ smiles: mol.smiles, drugName: item.drug_name })}
                     style={{ background: "linear-gradient(90deg, #10b981, #059669)" }}
                   >
                     View 3D Molecule
@@ -199,8 +199,12 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
       {reportSmile && (
         <ReportModal smiles={reportSmile} onClose={() => setReportSmile(null)} />
       )}
-      {view3DSmile && (
-        <Molecule3DModal smiles={view3DSmile} onClose={() => setView3DSmile(null)} />
+      {view3D && (
+        <Molecule3DModal
+          smiles={view3D.smiles}
+          drugName={view3D.drugName}
+          onClose={() => setView3D(null)}
+        />
       )}
     </div>
   );
