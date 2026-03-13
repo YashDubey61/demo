@@ -5,14 +5,6 @@
 Drug discovery is a highly time-consuming and resource-intensive process. 
 Existing computational tools for molecular generation and optimization often suffer from limited diversity, slow exploration, and poor usability for researchers. Despite recent advances in AI-driven molecular generation, there remains a gap between research models and practical, researcher-friendly systems capable of rapidly proposing novel, chemically valid drug candidates.
 
-# Live Project : 
-[stat-vision.xyz](https://stat-vision.xyz/)
-# Demo Video
-Check out idea overview video!
-
-[![Pindora Shield Working]](https://drive.google.com/file/d/1RD0yNYXEAOLJFaielz63YvALE1sXTR17/view?usp=drive_link)
-[![Pindora Shield Idea Overview](https://img.youtube.com/vi/qAfakXOXfcU/0.jpg)](https://www.youtube.com/watch?v=qAfakXOXfcU)
-
 ## Detailed Description
 
 - Traditional drug discovery pipelines require years of experimentation and extensive trial-and-error, leading to high costs and delayed treatments.
@@ -123,29 +115,4 @@ Together, these mechanisms ensure robustness, prevent full-system crashes, and a
 - Dataset cleaned, deduplicated, and structured for training multiple predictive models
 These enhancements will strengthen performance and enable scalable, system-level deployment.
 
-## Team Contributions
-
-The development of **Pindora Shield** was a collaborative effort, with responsibilities distributed across model development, backend engineering, frontend implementation, and system integration.
-
-### Kashif
-- Led the development of the **TenGAN / TangGen molecular generation model**.
-- Worked on generative modeling, training, and validation of molecule generation pipelines.
-- Contributed to backend logic related to molecule generation and model execution.
-
-### Jagdish
-- Worked on **machine learning evaluation models**, including individual predictive models for molecular properties.
-- Assisted in backend integration for ML inference and result aggregation.
-- Contributed to frontend logic related to result handling and data flow.
-
-### Yash
-- Implemented major parts of the **backend API layer**.
-- Developed and integrated the **3D molecule visualization module**, including WebGL-based molecule rendering.
-- Assisted with backend–frontend communication and testing.
-
-### Sameer
-- Led the development of the **frontend application**, including UI design and user interaction flows.
-- Handled frontend–backend integration and API consumption.
-- Supported integration, debugging, and cross-component testing across the system.
-
-All team members collaborated where needed to resolve integration issues, debug system-level problems, and ensure smooth end-to-end functionality.
 
