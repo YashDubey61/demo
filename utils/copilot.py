@@ -1,25 +1,20 @@
 import os
-from openai import AzureOpenAI
+from openai import OpenAI
 import json
 from dotenv import load_dotenv
 load_dotenv()
 
 class AzureOpenAIChatClient:
     def __init__(self, 
-                 azure_endpoint: str = None,
-                 deployment_name: str = None,
                  api_key: str = None,
-                 api_version: str = None):
+                 model_name: str = "llama3-8b-8192"):
         # Use os.environ.get to fetch environment variables, do not fallback to hardcoded sensitive values
-        self.azure_endpoint = azure_endpoint or os.environ.get("ENDPOINT_URL")
-        self.deployment_name = deployment_name or os.environ.get("DEPLOYMENT_NAME")
-        self.api_key = api_key or os.environ.get("AZURE_OPENAI_API_KEY")
-        self.api_version = api_version or "2025-01-01-preview"
+        self.api_key = api_key or os.environ.get("GROQ_API_KEY")
+        self.deployment_name = model_name
 
-        self.client = AzureOpenAI(
-            azure_endpoint=self.azure_endpoint,
-            api_key=self.api_key,
-            api_version=self.api_version
+        self.client = OpenAI(
+            base_url="https://api.groq.com/openai/v1",
+            api_key=self.api_key
         )
     def generate_disease_name_from_prompt(self, user_text: str) -> str:
         self.system_prompt = {
