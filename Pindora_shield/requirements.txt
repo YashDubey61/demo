@@ -4,19 +4,18 @@ uvicorn[standard]==0.34.0
 pydantic==2.10.3
 
 # Machine Learning & Deep Learning
-torch==2.5.1
-pytorch-lightning==2.4.0
-catboost==1.2.7
-scikit-learn==1.6.0
-optuna==4.1.0
+torch>=2.6.0
+pytorch-lightning>=2.4.0
+scikit-learn>=1.6.0
+# catboost and optuna: optional, for training only (catboost may fail on Python 3.13)
 
 # Chemistry & Molecular Processing
-rdkit==2024.3.6
+rdkit>=2024.9.2
 
 # Data Processing
-numpy==2.0.2
-pandas==2.2.3
-joblib==1.4.2
+numpy>=2.0.0
+pandas>=2.2.0
+joblib>=1.4.0
 
 # API & HTTP
 requests==2.32.3

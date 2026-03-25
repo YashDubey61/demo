@@ -1,36 +1,13 @@
 [
   {
-    "input_smile": "CCCCN1C(=O)[C@@H]([C@H](O)C2CCCCC2)NC(=O)C12CCN(Cc1ccc(Oc3ccc(C(=O)O)cc3)cc1)CC2.Cl",
-    "disease_name": "hiv infection",
-    "target_symbol": "CCR5",
-    "drug_name": "APLAVIROC HYDROCHLORIDE",
+    "input_smile": "C[C@H]1O[C@@H](O[C@H]2[C@@H](O)C[C@H](O[C@H]3[C@@H](O)C[C@H](O[C@H]4CC[C@@]5(C)[C@H](CC[C@@H]6[C@@H]5C[C@@H](O)[C@]5(C)[C@@H](C7=CC(=O)OC7)CC[C@]65O)C4)O[C@@H]3C)O[C@@H]2C)C[C@H](O)[C@@H]1O",
+    "disease_name": "rabies",
+    "target_symbol": "ATP1A3",
+    "drug_name": "DIGOXIN",
     "generated_molecules": [
       [
         {
-          "smiles": "CCCCN1C(=O)[C@@H]([C@H](O)C2CCCCC2)NC(=O)C12CCN(Cc1ccc(Oc3ccc(C(=O)O)cc3)cc1)CC2.Cl",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 614.1830000000002,
-            "logp": 5.001800000000005,
-            "hbd": 3,
-            "hba": 6,
-            "rotatable_bonds": 10,
-            "aromatic_rings": 2
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)N1C",
-    "disease_name": "hiv infection",
-    "target_symbol": "PPIA",
-    "drug_name": "CYCLOSPORINE",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C",
+          "smiles": "C[C@H]1O[C@@H](O[C@H]2[C@@H](O)C[C@H](O[C@H]3[C@@H](O)C[C@H](O[C@H]4CC[C@@]5(C)[C@H](CC[C@@H]6[C@@H]5C[C@@H](O)[C@]5(C)",
           "similarity": 0.0,
           "properties": {
             "valid": false
@@ -40,206 +17,68 @@
     ]
   },
   {
-    "input_smile": "CC(C)c1nc(CN(C)C(=O)N[C@H](C(=O)N[C@@H](Cc2ccccc2)C[C@H](O)[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)C(C)C)cs1",
-    "disease_name": "hiv infection",
-    "target_symbol": "CYP3A4",
-    "drug_name": "RITONAVIR",
+    "input_smile": "CC(=O)O.CNC(=N)NCCC[C@H](N)C(=O)O",
+    "disease_name": "rabies",
+    "target_symbol": "NOS2",
+    "drug_name": "TILARGININE ACETATE",
     "generated_molecules": [
       [
         {
-          "smiles": "CC(C)c1nc(CN(C)C(=O)N[C@H](C(=O)N[C@@H](Cc2ccccc2)C[C@H](O)[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)C(C)C)cs1",
+          "smiles": "CC(=O)O.CNC(=N)NCCC[C@H](N)C(=O)O",
           "similarity": 1.0,
           "properties": {
             "valid": true,
-            "molecular_weight": 720.9620000000001,
-            "logp": 5.905200000000005,
-            "hbd": 4,
-            "hba": 9,
-            "rotatable_bonds": 17,
-            "aromatic_rings": 4
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "CC(C)c1nc(CN(C)C(=O)N[C@H](C(=O)N[C@@H](Cc2ccccc2)C[C@H](O)[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)C(C)C)cs1",
-    "disease_name": "hiv infection",
-    "target_symbol": "CYP3A5",
-    "drug_name": "RITONAVIR",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "CC(C)c1nc(CN(C)C(=O)N[C@H](C(=O)N[C@@H](Cc2ccccc2)C[C@H](O)[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)C(C)C)cs1",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 720.9620000000001,
-            "logp": 5.905200000000005,
-            "hbd": 4,
-            "hba": 9,
-            "rotatable_bonds": 17,
-            "aromatic_rings": 4
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "CC(C)c1nc(CN(C)C(=O)N[C@@H](CCN2CCOCC2)C(=O)N[C@H](CC[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)Cc2ccccc2)cs1",
-    "disease_name": "hiv infection",
-    "target_symbol": "CYP3A7",
-    "drug_name": "COBICISTAT",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "CC(C)c1nc(CN(C)C(=O)N[C@@H](CCN2CCOCC2)C(=O)N[C@H](CC[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)Cc2ccccc2)cs1",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 776.0420000000001,
-            "logp": 6.000700000000006,
-            "hbd": 3,
-            "hba": 10,
-            "rotatable_bonds": 19,
-            "aromatic_rings": 4
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "CC(C)c1nc(CN(C)C(=O)N[C@@H](CCN2CCOCC2)C(=O)N[C@H](CC[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)Cc2ccccc2)cs1",
-    "disease_name": "hiv infection",
-    "target_symbol": "CYP3A43",
-    "drug_name": "COBICISTAT",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "CC(C)c1nc(CN(C)C(=O)N[C@@H](CCN2CCOCC2)C(=O)N[C@H](CC[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)Cc2ccccc2)cs1",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 776.0420000000001,
-            "logp": 6.000700000000006,
-            "hbd": 3,
-            "hba": 10,
-            "rotatable_bonds": 19,
-            "aromatic_rings": 4
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "C#C[C@@]1(O)[C@@H](CO)O[C@@H](n2ccc(N)nc2=O)[C@@H]1O",
-    "disease_name": "hiv infection",
-    "target_symbol": "POLR2A",
-    "drug_name": "TAS-106",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "C#C[C@@]1(O)[C@@H](CO)O[C@@H](n2ccc(N)nc2=O)[C@@H]1O",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 267.241,
-            "logp": -2.559599999999999,
-            "hbd": 4,
-            "hba": 7,
-            "rotatable_bonds": 2,
-            "aromatic_rings": 1
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "CCc1cnn2c(NCc3ccc[n+]([O-])c3)cc(N3CCCC[C@H]3CCO)nc12",
-    "disease_name": "hiv infection",
-    "target_symbol": "CDK9",
-    "drug_name": "DINACICLIB",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "CCc1cnn2c(NCc3ccc[n+]([O-])c3)cc(N3CCCC[C@H]3CCO)nc12",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 396.4950000000003,
-            "logp": 2.2785000000000006,
-            "hbd": 2,
-            "hba": 6,
-            "rotatable_bonds": 7,
-            "aromatic_rings": 3
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "FC(F)(F)Oc1ccc(Nc2ccc3cccc(Cl)c3n2)cc1",
-    "disease_name": "hiv infection",
-    "target_symbol": "NCBP1",
-    "drug_name": "OBEFAZIMOD",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "FC(F)(F)Oc1ccc(Nc2ccc3cccc(Cl)c3n2)cc1",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 338.71600000000007,
-            "logp": 5.530400000000002,
-            "hbd": 1,
-            "hba": 3,
-            "rotatable_bonds": 3,
-            "aromatic_rings": 3
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "FC(F)(F)Oc1ccc(Nc2ccc3cccc(Cl)c3n2)cc1",
-    "disease_name": "hiv infection",
-    "target_symbol": "NCBP2",
-    "drug_name": "OBEFAZIMOD",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "FC(F)(F)Oc1ccc(Nc2ccc3cccc(Cl)c3n2)cc1",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 338.71600000000007,
-            "logp": 5.530400000000002,
-            "hbd": 1,
-            "hba": 3,
-            "rotatable_bonds": 3,
-            "aromatic_rings": 3
-          }
-        }
-      ]
-    ]
-  },
-  {
-    "input_smile": "O=C(NC1CCNCC1)c1n[nH]cc1NC(=O)c1c(Cl)cccc1Cl",
-    "disease_name": "hiv infection",
-    "target_symbol": "CDK7",
-    "drug_name": "AT-7519",
-    "generated_molecules": [
-      [
-        {
-          "smiles": "O=C(NC1CCNCC1)c1n[nH]cc1NC(=O)c1c(Cl)cccc1Cl",
-          "similarity": 1.0,
-          "properties": {
-            "valid": true,
-            "molecular_weight": 382.2510000000001,
-            "logp": 2.4505999999999997,
-            "hbd": 4,
+            "molecular_weight": 248.28299999999996,
+            "logp": -0.9868299999999983,
+            "hbd": 6,
             "hba": 4,
-            "rotatable_bonds": 4,
+            "rotatable_bonds": 5,
+            "aromatic_rings": 0
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+    "disease_name": "rabies",
+    "target_symbol": "RPS15",
+    "drug_name": "ATALUREN",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 284.246,
+            "logp": 3.240900000000001,
+            "hbd": 1,
+            "hba": 4,
+            "rotatable_bonds": 3,
+            "aromatic_rings": 3
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "input_smile": "c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1",
+    "disease_name": "rabies",
+    "target_symbol": "CHRNA4",
+    "drug_name": "VARENICLINE",
+    "generated_molecules": [
+      [
+        {
+          "smiles": "c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1",
+          "similarity": 1.0,
+          "properties": {
+            "valid": true,
+            "molecular_weight": 211.26799999999994,
+            "logp": 1.8038999999999998,
+            "hbd": 1,
+            "hba": 3,
+            "rotatable_bonds": 0,
             "aromatic_rings": 2
           }
         }

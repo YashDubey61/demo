@@ -108,6 +108,14 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
           padding: 16px;
           border-radius: 14px;
         }
+        .molecule-clickable {
+          cursor: pointer;
+          transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .molecule-clickable:hover {
+          border-color: rgba(16, 185, 129, 0.5);
+          box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2);
+        }
         .smiles {
           margin-top: 14px;
           font-family: monospace;
@@ -126,6 +134,12 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
           font-size: 13px;
         }
         .report-button:hover { opacity: 0.95; }
+        .view-3d-hint {
+          font-size: 11px;
+          color: #6ee7b7;
+          margin-top: 8px;
+          opacity: 0.9;
+        }
       `}</style>
 
       {results.map((item, index) => {
@@ -144,36 +158,37 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
 
             {mol && (
               <>
-                <div className="props">
+                <div
+                  className="props molecule-clickable"
+                  onClick={() => setView3D({ smiles: mol.smiles, drugName: item.drug_name })}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === "Enter" && setView3D({ smiles: mol.smiles, drugName: item.drug_name })}
+                  title="Click to view 3D structure"
+                >
                   <div>Molecular Weight: {mol.properties.molecular_weight}</div>
                   <div>LogP: {mol.properties.logp}</div>
                   <div>HBD: {mol.properties.hbd}</div>
                   <div>HBA: {mol.properties.hba}</div>
                   <div>Rotatable Bonds: {mol.properties.rotatable_bonds}</div>
                   <div>Aromatic Rings: {mol.properties.aromatic_rings}</div>
+                  <div style={{ gridColumn: "1 / -1", fontSize: 12, color: "#10b981", marginTop: 4 }}>Click to view 3D</div>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 14 }}>
                   <div
                     className="smiles"
                     style={{ cursor: "pointer" }}
-                    onClick={() => fetchMetrics(mol.smiles)}
+                    onClick={(e) => { e.stopPropagation(); fetchMetrics(mol.smiles); }}
                   >
                     SMILES: {mol.smiles}
                   </div>
 
                   <button
                     className="report-button"
-                    onClick={() => setReportSmile(mol.smiles)}
+                    onClick={(e) => { e.stopPropagation(); setReportSmile(mol.smiles); }}
                   >
                     Report
-                  </button>
-                  <button
-                    className="report-button"
-                    onClick={() => setView3D({ smiles: mol.smiles, drugName: item.drug_name })}
-                    style={{ background: "linear-gradient(90deg, #10b981, #059669)" }}
-                  >
-                    View 3D Molecule
                   </button>
                 </div>
 

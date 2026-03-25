@@ -9,6 +9,7 @@ import Molecule3DViewer from "./Molecule3DViewer";
 import MolecularInfoPanel from "../components/MolecularInfoPanel";
 import type { MolecularInfo } from "../components/MolecularInfoPanel";
 import { getApiUrl } from "../config/api";
+import { load3Dmol } from "../utils/load3Dmol";
 
 interface Molecule3DModalProps {
   smiles: string;
@@ -43,11 +44,15 @@ export default function Molecule3DModal({ smiles, drugName, onClose }: Molecule3
       setSdf(null);
       setMetadata(null);
       try {
-        const res = await fetch(getApiUrl("/api/generate-3d-molecule"), {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ smiles }),
-        });
+        // Load 3Dmol.js and fetch 3D SDF in parallel — both only when user opens modal
+        const [res] = await Promise.all([
+          fetch(getApiUrl("/api/generate-3d-molecule"), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ smiles }),
+          }),
+          load3Dmol(), // Load viewer lib on-demand (not during molecule generation)
+        ]);
         const data: ApiResponse = await res.json();
         if (cancelled) return;
         if (!res.ok) throw new Error(data?.detail || data?.message || `HTTP ${res.status}`);
